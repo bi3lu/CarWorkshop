@@ -23,6 +23,18 @@ public class HomeController : Controller
         return View();
     }
 
+    public IActionResult About()
+    {
+        var model = new AboutModel()
+        {
+            Title = "About page",
+            Description = "Some description...",
+            Tags = new List<string>() { "car", "app", "free" }
+        };
+
+        return View(model);
+    }
+
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
     {

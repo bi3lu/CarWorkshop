@@ -1,0 +1,14 @@
+﻿@model AboutModel
+
+<h1>@Model.Title</h1>
+<h1>@Model.Description</h1>
+
+<p>Tags:</p>
+<ul>
+    @{
+        foreach (var t in Model.Tags)
+        {
+            <li>@t</li>
+        }
+    }
+</ul>
