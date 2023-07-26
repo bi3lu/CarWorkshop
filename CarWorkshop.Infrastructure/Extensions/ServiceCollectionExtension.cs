@@ -10,6 +10,7 @@ namespace CarWorkshop.Infrastructure.Extensions
         public static void AddInfrastructure(this IServiceCollection service, IConfiguration configuration)
         {
             service.AddDbContext<CarWorkshopDbContext>(options => options.UseSqlServer(configuration.GetConnectionString("CarWorkshop")));
+            service.AddScoped<Seeders.CarWorkshopSeeder>();
         }
     }
 }
