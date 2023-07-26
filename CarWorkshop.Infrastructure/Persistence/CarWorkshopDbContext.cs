@@ -4,13 +4,11 @@ namespace CarWorkshop.Infrastructure.Persistence
 {
     public class CarWorkshopDbContext : DbContext
     {
-        private readonly string _connectionString = "Server=(localdb)\\mssqllocaldb;Database=CarWorkshopDb;Trusted_Connection=True;";
-
         public DbSet<Domain.Entities.CarWorkshop> CarWorkshops { get; set; }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.UseSqlServer(_connectionString);
+        public CarWorkshopDbContext(DbContextOptions<CarWorkshopDbContext> options) : base(options)
+        { 
+
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
