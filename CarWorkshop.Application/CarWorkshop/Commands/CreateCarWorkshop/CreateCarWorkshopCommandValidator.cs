@@ -1,11 +1,11 @@
 ﻿using CarWorkshop.Domain.Interfaces;
 using FluentValidation;
 
-namespace CarWorkshop.Application.CarWorkshop
+namespace CarWorkshop.Application.CarWorkshop.Commands.CreateCarWorkshop
 {
-    public class CarWorkshopDtoValidator : AbstractValidator<CarWorkshopDto>
+    public class CreateCarWorkshopCommandValidator : AbstractValidator<CreateCarWorkshopCommand>
     {
-        public CarWorkshopDtoValidator(ICarWorkshopRespository respository)
+        public CreateCarWorkshopCommandValidator(ICarWorkshopRespository respository)
         {
             RuleFor(c => c.Name)
                 .NotEmpty().WithMessage("Please enter name")
