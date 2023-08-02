@@ -13,10 +13,12 @@ namespace CarWorkshop.Infrastructure.Extensions
         public static void AddInfrastructure(this IServiceCollection service, IConfiguration configuration)
         {
             service.AddDbContext<CarWorkshopDbContext>(options => options.UseSqlServer(configuration.GetConnectionString("CarWorkshop")));
-            service.AddDefaultIdentity<IdentityUser>()
-                .AddEntityFrameworkStores<CarWorkshopDbContext>();
             service.AddScoped<Seeders.CarWorkshopSeeder>();
             service.AddScoped<ICarWorkshopRespository, CarWorkshopRespository>();
+            service.AddDefaultIdentity<IdentityUser>(options => {
+                options.Stores.MaxLengthForKeys = 450;
+            })
+            .AddEntityFrameworkStores<CarWorkshopDbContext>();
         }
     }
 }
