@@ -48,6 +48,9 @@
     </dl>
 </div>
 <div>
-    <a asp-controller="CarWorkshop" asp-action="Edit" asp-route-encodedName="@Model.EncodedName" class="btn btn-outline-secondary">Edit</a>
+    @if (Model.IsEditable)
+    {
+        <a asp-controller="CarWorkshop" asp-action="Edit" asp-route-encodedName="@Model.EncodedName" class="btn btn-outline-secondary">Edit</a>
+    }
     <a asp-action="Index">Back to List</a>
 </div>
