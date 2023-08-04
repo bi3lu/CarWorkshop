@@ -18,6 +18,7 @@ namespace CarWorkshop.Infrastructure.Extensions
             service.AddDefaultIdentity<IdentityUser>(options => {
                 options.Stores.MaxLengthForKeys = 450;
             })
+            .AddRoles<IdentityRole>()
             .AddEntityFrameworkStores<CarWorkshopDbContext>();
         }
     }
