@@ -3,6 +3,7 @@ using CarWorkshop.Application.CarWorkshop.Commands.CreateCarWorkshop;
 using CarWorkshop.Application.CarWorkshop.Commands.EditCarWorkshop;
 using CarWorkshop.Application.CarWorkshop.Commands.Queries.GetAllCarWorkshops;
 using CarWorkshop.Application.CarWorkshop.Commands.Queries.GetCarWorkshopByEncodedName;
+using CarWorkshop.MVC.Extensions;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -79,7 +80,9 @@ namespace CarWorkshop.MVC.Controllers
                 return View(command);
             }
 
-            await _mediator.Send(command);
+            // await _mediator.Send(command);
+
+            this.SetNotification("success", $"Created car workshop: {command.Name}");
 
             return RedirectToAction(nameof(Index));
         }
