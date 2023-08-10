@@ -1,0 +1,46 @@
+﻿@model CarWorkshop.Application.CarWorkshopService.Commands.CreateCarWorkshopServiceCommand
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#createCarWorkshopServiceModal">
+    Add car workshop service
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="createCarWorkshopServiceModal" tabindex="-1" role="dialog" aria-labelledby="createCarWorkshopServiceModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+        <form asp-action="CreateCarWorkshopService">
+            <div class="modal-header">
+                <h5 class="modal-title" id="createCarWorkshopServiceModalLabel">Create new car workshop service</h5>
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                <input asp-for="CarWorkshopEncodedName" class="form-control" type="hidden" />
+
+                <div class="form-group">
+                    <label asp-for="Description" class="control-label"></label>
+                    <input asp-for="Description" class="form-control" />
+                    <span asp-validation-for="Description" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Cost" class="control-label"></label>
+                    <input asp-for="Cost" class="form-control" />
+                    <span asp-validation-for="Cost" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
