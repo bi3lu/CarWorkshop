@@ -5,7 +5,7 @@ namespace CarWorkshop.Application.CarWorkshop.Commands.CreateCarWorkshop
 {
     public class CreateCarWorkshopCommandValidator : AbstractValidator<CreateCarWorkshopCommand>
     {
-        public CreateCarWorkshopCommandValidator(ICarWorkshopRespository respository)
+        public CreateCarWorkshopCommandValidator(ICarWorkshopRepository respository)
         {
             RuleFor(c => c.Name)
                 .NotEmpty().WithMessage("Please enter name")

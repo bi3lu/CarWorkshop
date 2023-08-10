@@ -4,11 +4,11 @@ using Microsoft.EntityFrameworkCore;
 
 namespace CarWorkshop.Infrastructure.Repositories
 {
-    public class CarWorkshopRespository : ICarWorkshopRespository
+    public class CarWorkshopRepository : ICarWorkshopRepository
     {
         private readonly CarWorkshopDbContext _context;
 
-        public CarWorkshopRespository(CarWorkshopDbContext context)
+        public CarWorkshopRepository(CarWorkshopDbContext context)
         {
             _context = context;
         }

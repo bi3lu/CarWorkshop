@@ -6,10 +6,10 @@ namespace CarWorkshop.Application.CarWorkshop.Commands.Queries.GetAllCarWorkshop
 {
     public class GetAllCarWorkshopsQueryHandler : IRequestHandler<GetAllCarWorkshopsQuery, IEnumerable<CarWorkshopDto>>
     {
-        private readonly ICarWorkshopRespository _carWorkshoprespository;
+        private readonly ICarWorkshopRepository _carWorkshoprespository;
         private readonly IMapper _mapper;
 
-        public GetAllCarWorkshopsQueryHandler(IMapper mapper, ICarWorkshopRespository carWorkshoprespository)
+        public GetAllCarWorkshopsQueryHandler(IMapper mapper, ICarWorkshopRepository carWorkshoprespository)
         {
             _carWorkshoprespository = carWorkshoprespository;
             _mapper = mapper;

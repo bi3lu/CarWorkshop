@@ -6,10 +6,10 @@ namespace CarWorkshop.Application.CarWorkshop.Commands.EditCarWorkshop
 {
     public class EditCarWorkshopCommandHandler : IRequestHandler<EditCarWorkshopCommand>
     {
-        private readonly ICarWorkshopRespository _carWorkshoprespository;
+        private readonly ICarWorkshopRepository _carWorkshoprespository;
         private readonly IUserContext _userContext;
 
-        public EditCarWorkshopCommandHandler(ICarWorkshopRespository carWorkshoprespository, IUserContext userContext)
+        public EditCarWorkshopCommandHandler(ICarWorkshopRepository carWorkshoprespository, IUserContext userContext)
         {
             _carWorkshoprespository = carWorkshoprespository;
             _userContext = userContext;

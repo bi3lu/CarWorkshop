@@ -1,6 +1,6 @@
 ﻿namespace CarWorkshop.Domain.Interfaces
 {
-    public interface ICarWorkshopRespository
+    public interface ICarWorkshopRepository
     {
         Task Create(Domain.Entities.CarWorkshop carWorkshop);
         Task<Domain.Entities.CarWorkshop?> GetByName(string name);
