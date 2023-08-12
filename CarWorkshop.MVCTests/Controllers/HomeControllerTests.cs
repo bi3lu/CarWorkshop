@@ -29,7 +29,7 @@ namespace CarWorkshop.MVC.Controllers.Tests
 
             var content = await respone.Content.ReadAsStringAsync();
 
-            content.Should().Contain("<div class =\"alert alert-primary\">Some description...</div>");
+            content.Should().Contain("<h1>About page</h1>");
         }
     }
 }
