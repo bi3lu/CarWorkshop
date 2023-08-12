@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarWorkshop.ApplicationTest
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{6A8C09F1-24EE-42D4-8E64-9F280E215A71}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarWorkshop.MVCTests", "CarWorkshop.MVCTests\CarWorkshop.MVCTests.csproj", "{188D07FB-CE11-4699-AD25-AA3DD0098683}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,6 +49,10 @@ Global
 		{B3AB4DF3-DCFC-4CE8-A731-A5E4D7F9DAD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B3AB4DF3-DCFC-4CE8-A731-A5E4D7F9DAD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B3AB4DF3-DCFC-4CE8-A731-A5E4D7F9DAD6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{188D07FB-CE11-4699-AD25-AA3DD0098683}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{188D07FB-CE11-4699-AD25-AA3DD0098683}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{188D07FB-CE11-4699-AD25-AA3DD0098683}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{188D07FB-CE11-4699-AD25-AA3DD0098683}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -54,6 +60,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{AD647E85-3293-46F1-8BC2-EBAC22C2AB47} = {6A8C09F1-24EE-42D4-8E64-9F280E215A71}
 		{B3AB4DF3-DCFC-4CE8-A731-A5E4D7F9DAD6} = {6A8C09F1-24EE-42D4-8E64-9F280E215A71}
+		{188D07FB-CE11-4699-AD25-AA3DD0098683} = {6A8C09F1-24EE-42D4-8E64-9F280E215A71}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {029E32D1-7437-4DE9-831B-FC386C6519BE}
